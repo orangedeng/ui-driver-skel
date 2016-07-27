@@ -4,24 +4,271 @@
     {{partial "host/add-common"}}
 
     <div class="over-hr r-mt20 r-mb20">
-      <span>My Skeleton Driver</span>
+      <span>Aliyun Api Info</span>
     </div>
 
     {{!-- An example input option --}}
-    <div class="row">
-      <div class="col-sm-12 col-md-2 form-label">
-        <label class="form-control-static">Size</label>
-      </div>
-      <div class="col-sm-12 col-md-4">
-        <div class="input-group">
-          {{input type="text"
-            class="form-control"
-            value=model.%%DRIVERNAME%%Config.size
-          }}
-          <span class="input-group-addon">MB</span>
+    <div class="row form-group">
+
+        <div class="col-sm-12 col-md-2 form-label">
+            <label class="form-control-static">accessKeyId*</label>
         </div>
-      </div>
+        <div class="col-sm-12 col-md-4">
+              {{input type="text"
+              class="form-control"
+              value=model.%%DRIVERNAME%%Config.accessKeyId
+              }}
+        </div>
+
+        <div class="col-sm-12 col-md-2 form-label">
+            <label class="form-control-static">accessKeySecret*</label>
+        </div>
+        <div class="col-sm-12 col-md-4">
+              {{input type="text"
+              class="form-control"
+              value=model.%%DRIVERNAME%%Config.accessKeySecret
+              }}
+        </div>
     </div>
+      <div class="row form-group">
+          <div class="col-sm-12 col-md-2 form-label">
+              <label class="form-control-static">自定义Api网关</label>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.apiEndpoint
+            }}
+          </div>
+      </div>
+
+      <div class="over-hr r-mt20 r-mb20">
+          <span>Instance Info</span>
+      </div>
+    <div class="row form-group">
+        <div class="col-sm-12 col-md-2 form-label">
+            <label class="form-control-static">实例描述</label>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          {{input type="text"
+          class="form-control"
+          value=model.%%DRIVERNAME%%Config.description
+          }}
+        </div>
+
+        <div class="col-sm-12 col-md-2 form-label">
+            <label class="form-control-static">实例规格</label>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          {{input type="text"
+          class="form-control"
+          value=model.%%DRIVERNAME%%Config.instanceType
+          }}
+        </div>
+    </div>
+
+      <div class="row form-group">
+          <div class="col-sm-12 col-md-2 form-label">
+              <label class="form-control-static">系统镜像</label>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.imageId
+            }}
+          </div>
+
+          <div class="col-sm-12 col-md-2 form-label">
+              <label class="form-control-static">实例Tag</label>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.tag
+            }}
+          </div>
+      </div>
+
+      <div class="row form-group">
+          <div class="col-sm-12 col-md-2 form-label">
+              <label class="form-control-static">网络最大带宽</label>
+          </div>
+          <div class="col-sm-12 col-md-4">
+              <div class="input-group">
+            {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.internetMaxBandwidth
+            }}
+                  <div class="input-group-addon">MB</div>
+              </div>
+          </div>
+          <div class="col-sm-12 col-md-2 form-label">
+              <label class="form-control-static">slbid</label>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.slbId
+            }}
+          </div>
+
+      </div>
+
+      <div class="over-hr r-mt20 r-mb20">
+          <span>Storage Info</span>
+      </div>
+
+      <div class="row form-group">
+          <div class="col-sm-12 col-md-2 form-label">
+              <label class="form-control-static">是否IO优化实例</label>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            {{input type="text" class="form-control" value=model.%%DRIVERNAME%%Config.isOptimized }}
+          </div>
+
+          <div class="col-sm-12 col-md-2 form-label">
+              <label class="form-control-static">系统硬盘种类</label>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.systemDiskCategory
+            }}
+          </div>
+      </div>
+
+      <div class="row form-group">
+          <div class="col-sm-12 col-md-2 form-label">
+              <label class="form-control-static">存储盘种类</label>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.diskCategory
+            }}
+          </div>
+
+          <div class="col-sm-12 col-md-2 form-label">
+              <label class="form-control-static">磁盘大小</label>
+          </div>
+          <div class="col-sm-12 col-md-4">
+              <div class="input-group">
+            {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.diskSize
+            }}
+                  <div class="input-group-addon">GB</div>
+              </div>
+          </div>
+      </div>
+
+      <div class="row form-group">
+          <div class="col-sm-12 col-md-2 form-label">
+              <label class="form-control-static">region</label>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.region
+            }}
+          </div>
+
+          <div class="col-sm-12 col-md-2 form-label">
+              <label class="form-control-static">zone</label>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.zone
+            }}
+          </div>
+      </div>
+
+      <div class="over-hr r-mt20 r-mb20">
+          <span>Network Info</span>
+      </div>
+
+      <div class="row form-group">
+          <div class="col-sm-12 col-md-2 form-label">
+              <label class="form-control-static">routeCidr</label>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.routeCidr
+            }}
+          </div>
+
+          <div class="col-sm-12 col-md-2 form-label">
+              <label class="form-control-static">vpcid</label>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.vpcId
+            }}
+          </div>
+      </div>
+
+      <div class="row form-group">
+          <div class="col-sm-12 col-md-2 form-label">
+              <label class="form-control-static">vswitchId</label>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.vswitchId
+            }}
+          </div>
+
+          <div class="col-sm-12 col-md-2 form-label">
+              <label class="form-control-static">privateIp</label>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.privateIp
+            }}
+          </div>
+      </div>
+
+      <div class="row form-group">
+          <div class="col-sm-12 col-md-2 form-label">
+              <label class="form-control-static">privateAddressOnly</label>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            {{input type="checkbox"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.privateAddressOnly
+            }}
+          </div>
+      </div>
+
+      <div class="over-hr r-mt20 r-mb20">
+          <span>Security Info</span>
+      </div>
+      <div class="row form-group">
+          <div class="col-sm-12 col-md-2 form-label">
+              <label class="form-control-static">安全组</label>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.securityGroup
+            }}
+          </div>
+
+          <div class="col-sm-12 col-md-2 form-label">
+              <label class="form-control-static">ssh远程登陆密码</label>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            {{input type="text"
+            class="form-control"
+            value=model.%%DRIVERNAME%%Config.sshPassword
+            }}
+          </div>
+      </div>
+
 
     {{!-- This partial contains the Labels and Advanced Options fields --}}
     {{partial "host/add-options"}}
