@@ -1,5 +1,5 @@
-# ui-driver-skel
-Skeleton Rancher UI driver for custom docker-machine drivers
+# ui-driver-aliyunecs
+Skeleton Rancher UI driver for aliyunecs drivers
 
 ## Setup
 
