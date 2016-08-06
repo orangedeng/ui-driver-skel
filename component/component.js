@@ -35,6 +35,7 @@ define('ui/components/machine/driver-%%DRIVERNAME%%/component', ['exports', 'emb
     /* ^--- And here */
     model: null,
     config: Ember.computed.alias('model.%%DRIVERNAME%%Config'),
+    publicIP: false,
     sysDiskTypes: sysDiskTypes,
     dataDiskTypes: dataDiskTypes,
 
@@ -85,6 +86,9 @@ define('ui/components/machine/driver-%%DRIVERNAME%%/component', ['exports', 'emb
       if (validate) {
         if (!this.get('config.diskCategory')) {
           this.set('config.diskSize', 0);
+        }
+        if (this.publicIP) {
+          this.set('config.privateAddressOnly', false)
         }
         return validate;
       } else {
